@@ -108,8 +108,10 @@ class PortScanner(NetworkTool):
             service_name = common_ports.get(port, "Unknown")
 
             self.lock.acquire()
-            self.scan_results.append((port, status, service_name))
-            self.lock.release()
+            try:
+                self.scan_results.append((port, status, service_name))
+            finally:
+                self.lock.release()
 
         except socket.error as e:
             print(f"Error scanning port {port}: {e}")
