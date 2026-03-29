@@ -24,7 +24,7 @@ print(f"Operating System: {os.name}")
 # TODO: Create the common_ports dictionary (Step iv)
 # Add a 1-line comment above it explaining what it stores
 
-# This dictionary stores common port numbers and their associated service names.
+# This dictionary stores common port numbers and their associated service names
 common_ports = {
     21: "FTP",
     22: "SSH",
@@ -51,9 +51,9 @@ class NetworkTool:
 
 # Q3: What is the benefit of using @property and @target.setter?
 # Using @property and @target.setter lets the class control how the target
-    # value is accessed and changed without exposing the private variable directly.
-    # This makes the code safer because the setter can validate the new value first.
-    # In this program, it prevents the target from being changed to an empty string.
+    # value is accessed and changed without exposing the private variable directly
+    # This makes the code safer because the setter can validate the new value first
+    # In this program, it prevents the target from being changed to an empty string
     @property
     def target(self):
         return self.__target
